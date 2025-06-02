@@ -5,13 +5,12 @@ import { useParams } from "react-router-dom";
 const Search = () => {
   const params = useParams();
   const [books, setBooks] = useState([]);
+  const apiKey = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
 
   const getBooks = (name) => {
     axios
       .get(
-        "https://www.googleapis.com/books/v1/volumes?q=subject:" +
-          name +
-          "&key=AIzaSyDtuiH4Efi_tpRltRve03DvDagDFCKWjbk&maxResults=30"
+        `https://www.googleapis.com/books/v1/volumes?q=subject:${name}&key=${apiKey}`
       )
       .then((res) => setBooks(res.data.items))
       .catch((err) => console.log(err));

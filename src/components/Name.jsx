@@ -5,14 +5,12 @@ import { useHref, useNavigate, useParams } from "react-router-dom";
 const Name = () => {
   const [books, setBooks] = useState([]);
   const params = useParams();
+  const apiKey = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
 
   const getBooks = (name) => {
     axios
       .get(
-        "https://www.googleapis.com/books/v1/volumes?q=" +
-          name +
-          "=free-ebooks&key=AIzaSyDtuiH4Efi_tpRltRve03DvDagDFCKWjbk" +
-          "&maxResults=30"
+        `https://www.googleapis.com/books/v1/volumes?q=${name}&key=${apiKey}`
       )
       .then((res) => setBooks(res.data.items))
       .catch((err) => console.log(err));
