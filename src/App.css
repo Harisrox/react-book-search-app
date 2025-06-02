@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+.navbar {
+  background-color: #fff;
+  color: rgb(108, 108, 108);
+  height: 40px;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar img {
+  height: 40px;
+  width: 50px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  list-style: none;
+  margin-right: 15px;
+  margin-top: 20px;
+  background: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.navbar ul li:hover {
+  transform: scale(1.3);
+  transition: ease-in-out 0.3s;
+}
+
+.hero {
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./images/Book-home.jpg");
+  margin-top: 20px;
+}
+
+.hero-banner {
+  text-align: center;
+  padding: 0 3rem;
+  color: #fff;
+}
+
+.hero-banner h4 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+}
+
+.hero-banner p {
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  letter-spacing: 0.2rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input-bar {
+  height: 35px;
+  width: 100%;
+  border-radius: 20px;
+  border: 4px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+.input-bar:hover {
+  background: #fff;
+  color: #000;
+}
+
+.hero-btn {
+  font-size: 1.25rem;
+  background-color: #fff;
+  color: rgb(118, 118, 118);
+  padding: 2px 24px;
+  text-decoration: none;
+  border: 4px solid #fff;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hero-btn:hover {
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.body {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./images/Book-home.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 20px;
+}
+
+.main {
+  position: relative;
+  height: 25vh;
+  margin: 50vh 0 20px 0;
+  background: url("https://cdn.pixabay.com/photo/2014/12/21/23/28/shelf-575408_960_720.png");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.genre1 {
+  position: absolute;
+  height: 150px;
+  background-color: transparent;
+  color: #000;
+  top: -100px;
+  left: 100px;
+}
+
+.body input {
+  margin-top: 50px;
+  width: 600px;
+}
+
+.genre1 img {
+  height: 100%;
+  margin: 0 12px;
+  width: 50px;
+  z-index: 2;
+}
+
+.genre1 img:hover {
+  transform: scale(1.05);
+  transform: translate(25px);
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.footer {
+  margin-bottom: -25px;
+}
+
+.footer__text {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  color: rgb(108, 108, 108);
+}
+
+.footer__text:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 750px) {
+  .main {
+    display: none;
+  }
+  .body input {
+    max-width: 60%;
+    margin-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
